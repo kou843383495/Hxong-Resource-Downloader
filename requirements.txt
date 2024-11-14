@@ -1,0 +1,4 @@
+Telethon ~= 1.37.0
+cryptg ~= 0.5.0.post0
+pathlib ~= 1.0.1
+patool ~= 3.0.3
