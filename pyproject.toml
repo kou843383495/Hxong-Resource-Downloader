@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0","Telethon ~= 1.37.0","cryptg ~= 0.5.0.post0","pathlib ~= 1.0.1","patool ~= 3.0.3"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "HxongResourceDownloader"
-version = "0.0.1"
+version = "0.0.3"
 authors = [
   { name="", email="author@example.com" },
 ]
@@ -17,5 +17,18 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+    "Telethon >= 1.37.0",
+    "cryptg >= 0.5.0.post0",
+    "pathlib >= 1.0.1",
+    "patool >= 3.0.3"
+]
+
 [project.urls]
 Homepage = "https://github.com/kou843383495/Hxong-Resource-Downloader"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
+

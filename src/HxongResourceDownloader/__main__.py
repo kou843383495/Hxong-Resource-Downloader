@@ -1,6 +1,6 @@
 import argparse
 
-from TgDownloader import TgDownloader
+from .telegram_download import tg_downloader
 
 # Give the basic information about this tool in CLI
 parser = argparse.ArgumentParser(
@@ -16,7 +16,7 @@ parser.add_argument('--setting',default='TgSetting.json')
 args = vars(parser.parse_args())
 
 try:
-    TgDownloader()
+    tg_downloader()
 except AssertionError as e:
     print(e)
 

@@ -3,7 +3,7 @@ import time
 from pathlib import Path
 
 
-def nestedDirClean(currentDir:Path):
+def nested_dir_clean(currentDir:Path):
     if not currentDir.is_dir():
         return
     children = sorted(currentDir.glob('*'))
@@ -11,13 +11,13 @@ def nestedDirClean(currentDir:Path):
         print(children[0],currentDir)
         newDir = children[0].replace(currentDir.parent/f'{currentDir.name}-temp-{time.time()}')
         newDir = newDir.replace(currentDir)
-        nestedDirClean(newDir)
+        nested_dir_clean(newDir)
     else:
         for child in children:
-            nestedDirClean(child)
+            nested_dir_clean(child)
 
 
-def addIgnoreToDir(currentDir:Path,targetDir:str):
+def add_ignore_to_dir(currentDir:Path, targetDir:str):
     if not currentDir.is_dir():
         return
 
@@ -26,4 +26,4 @@ def addIgnoreToDir(currentDir:Path,targetDir:str):
 
     children = sorted(currentDir.glob('*'))
     for child in children:
-        addIgnoreToDir(child,targetDir)
+        add_ignore_to_dir(child, targetDir)
