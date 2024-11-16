@@ -33,7 +33,7 @@ def extract_archived_file(archived_file:Path) -> Path:
     newPath = archived_file.parent / fileName
     newPath.mkdir(parents=True,exist_ok=True)
     password = find_password(str(archived_file))
-    extract_result = subprocess.run(['7z', 'x', f'-p{password}',f'-o{str(newPath)}', archived_file], capture_output=True, text=True)
+    extract_result = subprocess.run(['7z', 'x', f'-p{password}',f'-o{str(newPath)}', str(archived_file)], capture_output=True, text=True)
     if 'Everything is Ok' in extract_result.stdout:
         pass
     archived_file.unlink(missing_ok=True)
