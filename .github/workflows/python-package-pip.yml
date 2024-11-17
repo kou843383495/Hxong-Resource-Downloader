@@ -10,9 +10,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-      with:
-        ref: 'master'
-    - name: Set up Python 3.10
+    - name: Set up Python 3.11.10
       uses: actions/setup-python@v3
       with:
         python-version: '3.11.10'
