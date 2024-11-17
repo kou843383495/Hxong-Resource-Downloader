@@ -20,8 +20,8 @@ classifiers = [
 dependencies = [
     "Telethon >= 1.37.0",
     "cryptg >= 0.5.0.post0",
-    "pathlib >= 1.0.1",
-    "patool >= 3.0.3"
+    "patool @ git+https://github.com/kou843383495/patool@master",
+    "tqdm ~= 4.67.0"
 ]
 
 [project.urls]
