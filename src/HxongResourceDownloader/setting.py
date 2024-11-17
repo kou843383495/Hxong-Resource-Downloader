@@ -16,6 +16,7 @@ class Setting:
             self.API_HASH = input('Please input the telegram API_HASH ')
             self.DOWNLOAD_DIR = Path(input('Please input the dir you want to save file. Type . if you want save current folder '))
             self.PASSWORDS = input('Please input the possible passwords.Can be multiple. ').split(' ')
+            self.PASSWORDS.insert(0,'')
             self.SESSION = None
             self.save_setting()
 

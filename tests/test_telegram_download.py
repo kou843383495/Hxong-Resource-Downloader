@@ -1,5 +1,7 @@
 import builtins
 
+import pytest
+
 from HxongResourceDownloader.setting import SETTING
 from HxongResourceDownloader.telegram_download import tg_downloader
 
@@ -17,6 +19,8 @@ def mock_input(message:str):
         case _:
             return 3
 
+
+@pytest.mark.skipif(SETTING.SESSION == 'test_session',reason='test connect to telegram only local')
 class TestTelegramDownload:
 
     def test_tg_downloader(self,tmp_path,monkeypatch):

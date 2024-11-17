@@ -1,5 +1,6 @@
 from pathlib import Path
 from random import choice
+
 from patoolib import create_archive
 
 from HxongResourceDownloader.Excepation.FileExcepation import NoFindSuitablePasswordError

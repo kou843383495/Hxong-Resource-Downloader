@@ -1,0 +1,11 @@
+{
+  "API_ID": "test_api_id",
+  "API_HASH": "test_api_hash",
+  "SESSION": "test_session",
+  "DOWNLOAD_DIR": ".",
+  "PASSWORDS": [
+    "test1",
+    "test2",
+    ""
+  ]
+}
