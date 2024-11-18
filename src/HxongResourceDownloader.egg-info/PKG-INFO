@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: HxongResourceDownloader
+Version: 0.0.3
+Summary: A simple package download file on telegram
+Author-email: author@example.com
+Project-URL: Homepage, https://github.com/kou843383495/Hxong-Resource-Downloader
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: ~=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Telethon~=1.37.0
+Requires-Dist: cryptg~=0.5.0.post0
+Requires-Dist: patool@ git+https://github.com/kou843383495/patool@master
+Requires-Dist: tqdm~=4.67.0
+
+# Hxong-Resource-Downloader
+There is a downloader that can auto download resource form some forum
