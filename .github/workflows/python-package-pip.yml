@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -27,4 +29,5 @@ jobs:
     - name: Build executable file
       run: |
         pip install pyinstaller
-        pyinstaller ./src/HxongResourceDownloader/__main__.py -F -n HxongResourceDownloader
+        pyinstaller ./src/HxongResourceDownloader/__main__.py -F -n HxongResourceDownloader --distpath ./
+    - uses: actions4git/add-commit-push@v1
