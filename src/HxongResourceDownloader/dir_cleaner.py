@@ -10,6 +10,8 @@ def nested_dir_clean(currentDir:Path):
     if len(children) == 1 and children[0].is_dir() and children[0].name == currentDir.name:
         print(children[0],currentDir)
         newDir = children[0].replace(currentDir.parent/f'{currentDir.name}-temp-{time.time()}')
+        if currentDir.exists():
+            currentDir.rmdir()
         newDir = newDir.replace(currentDir)
         nested_dir_clean(newDir)
     else:
