@@ -25,4 +25,5 @@ jobs:
         cd ../
     - name: Build executable file
       run: |
+        pip install pyinstaller
         pyinstaller ./src/HxongResourceDownloader/__main__.py -F -n HxongResourceDownloader
