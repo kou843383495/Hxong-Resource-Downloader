@@ -1,6 +1,6 @@
 import argparse
 
-from .telegram_download import tg_downloader
+from HxongResourceDownloader.telegram_download import tg_downloader
 
 # Give the basic information about this tool in CLI
 parser = argparse.ArgumentParser(

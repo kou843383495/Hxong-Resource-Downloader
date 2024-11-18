@@ -4,9 +4,9 @@ from pathlib import Path
 from patoolib import is_archive, test_archive, extract_archive
 from patoolib.util import PatoolError
 
-from .Excepation.FileExcepation import NoFindSuitablePasswordError
-from .dir_cleaner import nested_dir_clean
-from .setting import SETTING
+from HxongResourceDownloader.Excepation.FileExcepation import NoFindSuitablePasswordError
+from HxongResourceDownloader.dir_cleaner import nested_dir_clean
+from HxongResourceDownloader.setting import SETTING
 
 
 # Check the file is an archived file or not, if it archived then extract it to a new fold in target folder

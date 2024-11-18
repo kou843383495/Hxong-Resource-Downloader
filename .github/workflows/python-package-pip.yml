@@ -23,3 +23,6 @@ jobs:
         cd tests
         pytest
         cd ../
+    - name: Build executable file
+      run: |
+        pyinstaller ./src/HxongResourceDownloader/__main__.py -F -n HxongResourceDownloader

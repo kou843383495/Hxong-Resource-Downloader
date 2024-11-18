@@ -10,9 +10,9 @@ from telethon.sessions import StringSession
 from telethon.tl.types import InputMessagesFilterDocument
 from tqdm import tqdm
 
-from .Excepation.FileExcepation import NoFindSuitablePasswordError
-from .download_resource_check import check_file
-from .setting import SETTING
+from HxongResourceDownloader.Excepation.FileExcepation import NoFindSuitablePasswordError
+from HxongResourceDownloader.download_resource_check import check_file
+from HxongResourceDownloader.setting import SETTING
 
 
 def tg_downloader():
