@@ -1,12 +1,13 @@
-name: Python Package using pip
+name: build and test after push
 
 on: [push]
 
 jobs:
-  build-linux:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ${{ matrix.os }}
     strategy:
-      max-parallel: 5
+      matrix:
+        os:[ubuntu-latest, windows-latest]
 
     steps:
     - uses: actions/checkout@v4
