@@ -2,3 +2,6 @@
 /dist/
 /build/
 *.spec
+/src/HxongResourceDownloader.egg-info/
+*.egg-info/
+**/__pycache__/

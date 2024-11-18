@@ -30,4 +30,10 @@ jobs:
       run: |
         pip install pyinstaller
         pyinstaller ./src/HxongResourceDownloader/__main__.py -F -n HxongResourceDownloader --distpath ./
-    - uses: actions4git/add-commit-push@v1
+    - uses: actions4git/setup-git@v1
+    - name: push executable file
+      run: |
+        git pull
+        git add ${{ matrix.os == 'ubuntu-latest' && 'HxongResourceDownloader' || 'HxongResourceDownloader.exe' }}
+        git commit --message 'add executable'
+        git push
